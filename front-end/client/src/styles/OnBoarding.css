@@ -1,0 +1,137 @@
+/* OnBoarding.css */
+
+.onboarding-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.onboarding-card {
+  background: white;
+  padding: 3rem;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  color: #333;
+  position: relative;
+  z-index: 1;
+}
+
+.onboarding-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgba(255, 242, 0, 0.6); /* Orange accent */
+  margin-bottom: 1rem;
+}
+
+.onboarding-intro {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.pills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  min-height: 60px; /* To prevent jumping */
+}
+
+.pill {
+  background: #ffffff;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.pill:hover {
+  background: #e4e483;
+  border-color: #bbb;
+}
+
+.pill.selected {
+  background: rgb(246, 250, 8) ;
+  color: white;
+  border-color: #ffdd35;
+  transform: scale(1.1);
+}
+
+.pill.collapsed {
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+}
+.pill.disabled-grey {
+  background: #e0e0e0;
+  color: #999;
+  border-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.submit-btn {
+  background: rgb(102, 202, 236);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #5894d8;
+  transform: translateY(-2px);
+}
+
+.pills-container h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.onboarding-mascot {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 350px;
+  height: auto;
+  z-index: 0;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .onboarding-card {
+    padding: 2rem;
+    max-width: 90%;
+  }
+
+  .onboarding-title {
+    font-size: 2rem;
+  }
+
+  .onboarding-mascot {
+    width: 150px;
+    bottom: 10px;
+    left: 10px;
+  }
+}

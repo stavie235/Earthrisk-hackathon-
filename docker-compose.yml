@@ -1,0 +1,103 @@
+services:
+
+  # ---------------------------------------------------------------
+  # MySQL Database
+  # ---------------------------------------------------------------
+  db:
+    image: mysql:8.0
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./back-end/database/EARTHRISK_FINAL_SCHEMA_EMPTY.SQL:/docker-entrypoint-initdb.d/01_schema.sql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ---------------------------------------------------------------
+  # Express Backend (port 9876)
+  # ---------------------------------------------------------------
+  backend:
+    build: ./back-end/server
+    command: sh -c "node seed.js && node index.js"
+    restart: unless-stopped
+    ports:
+      - "9876:9876"
+    environment:
+      DB_HOST: db
+      DB_USER: root
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: earthrisk
+      DB_TEST_NAME: earthrisk_test
+      JWT_SECRET: ${JWT_SECRET}
+      PORT: 9876
+      USE_HTTPS: "false"
+      PYTHON_PATH: python3
+      WO_DEVELOPER_EDITION_SOURCE: orchestrate
+      WO_INSTANCE: ${WO_INSTANCE}
+      WO_API_KEY: ${WO_API_KEY}
+      ML_API_URL: http://ml-api:5001
+    depends_on:
+      db:
+        condition: service_healthy
+      db-seeder:
+        condition: service_completed_successfully
+      ml-api:
+        condition: service_started
+
+  # ---------------------------------------------------------------
+  # React Frontend (port 5173)
+  # ---------------------------------------------------------------
+  frontend:
+    build:
+      context: ./front-end/client
+      args:
+        VITE_MAPBOX_TOKEN: ${VITE_MAPBOX_TOKEN}
+    restart: unless-stopped
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+
+  # ---------------------------------------------------------------
+  # DB Seeder — runs once, imports parquet → Building + BuildingHistory
+  # ---------------------------------------------------------------
+  db-seeder:
+    build: ./ml-model
+    command: sh -c "python import_to_mysql.py && python import_history_to_mysql.py"
+    restart: "no"
+    environment:
+      DB_HOST: db
+      DB_USER: root
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: earthrisk
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # ---------------------------------------------------------------
+  # ML Inference Sidecar (Flask, port 5001) — always-on
+  # ---------------------------------------------------------------
+  ml-api:
+    build: ./ml-model
+    command: python app.py
+    restart: unless-stopped
+    ports:
+      - "5001:5001"
+
+  # ---------------------------------------------------------------
+  # ML Training Pipeline (runs once, only when called explicitly)
+  # Usage: docker compose --profile training up ml-training
+  # ---------------------------------------------------------------
+  ml-training:
+    build: ./ml-model
+    env_file:
+      - ./ml-model/.env
+    profiles:
+      - training
+
+volumes:
+  db_data:

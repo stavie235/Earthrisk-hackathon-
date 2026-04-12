@@ -1,0 +1,35 @@
+.dropdown-menu.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px; padding: 8px;
+    min-width: 200px; max-height: 320px;
+    overflow-y: auto;
+}
+
+.dropdown-menu.facilities-grid::-webkit-scrollbar { display: none; }
+
+.facility-checkbox-item {
+    display: flex; align-items: center; gap: 8px;
+    padding: 7px 10px;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 6px;
+    background: transparent;
+    cursor: pointer; user-select: none;
+    font-size: 12px; color: var(--text-secondary, #94a3b8);
+    pointer-events: auto;
+    transition: all 0.15s ease;
+}
+
+.facility-checkbox-item:hover {
+    background: var(--primary-dim, rgba(0,194,255,0.1));
+    border-color: rgba(0,194,255,0.25);
+    color: var(--text-primary, #e2e8f0);
+}
+
+.facility-checkbox-item input[type="checkbox"] {
+    cursor: pointer; pointer-events: auto;
+    width: 14px; height: 14px;
+    accent-color: var(--primary-color, #00c2ff);
+}
+
+.facility-checkbox-item span { flex: 1; word-wrap: break-word; }

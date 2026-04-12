@@ -1,0 +1,55 @@
+# ── Secrets / credentials ────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+insurance-risk-agents/.env
+ml-model/.env
+
+# SSL / TLS
+*.key
+*.pem
+*.cert
+*.crt
+
+# ── Node ─────────────────────────────────────────────────────────
+node_modules/
+dist/
+build/
+.npm/
+
+# ── Python ───────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+*.pkl
+*.joblib
+*.h5
+
+# ── Large data / ML artefacts ────────────────────────────────────
+*.parquet
+*.csv
+data-analysis/
+ml-model/output/
+
+# ── Logs ─────────────────────────────────────────────────────────
+*.log
+logs/
+npm-debug.log*
+
+# ── OS ───────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── IDE ──────────────────────────────────────────────────────────
+.idea/
+*.suo
+*.user
+.vs/
+.vscode/settings.json
+
+# ── Misc ─────────────────────────────────────────────────────────
+GEMINI.md
+.claude/settings.local.json

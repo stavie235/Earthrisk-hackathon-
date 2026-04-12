@@ -1,0 +1,101 @@
+/* Grid Layout for the cards */
+.overview {
+  display: grid;
+  /* This ensures cards stay a reasonable size */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* Base Card Style - Updated to Glass/Theme Style */
+.kpi-card,
+.reservation,
+.charger-power {
+  background: rgba(255, 255, 255, 0.75); /* Semi-transparent white */
+  backdrop-filter: blur(10px);           /* Blur effect */
+  -webkit-backdrop-filter: blur(10px);
+  
+  border-radius: 16px;                   /* More rounded */
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Subtle white border */
+  
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Hover effect for all cards */
+.kpi-card:hover,
+.reservation:hover,
+.charger-power:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.9); /* More opaque on hover */
+}
+
+/* Card Headings */
+.overview h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #666; /* Darker grey */
+  font-weight: 600;
+}
+
+/* --- KPI Cards Specifics --- */
+.kpi-card {
+  border-left: 5px solid #3498db; /* Blue for general stats */
+}
+
+.kpi-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.kpi-subtitle {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.85rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  font-weight: 500;
+}
+
+/* --- Reservation Card Specifics --- */
+.reservation {
+  /* Span 2 columns if screen is wide enough, optional */
+  grid-column: span 1; 
+  border-left: 5px solid var(--primary-color); /* Updated to Theme Yellow */
+}
+
+.rsv-info {
+  margin: 0.25rem 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #34495e;
+}
+
+/* --- Charger Power Card Specifics --- */
+.charger-power {
+  border-left: 5px solid #4cb817; /* Updated to a Sage Green tone to match theme */
+}
+
+.default-power {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 0;
+}
+
+/* Make reservation span full width on very small screens if needed, 
+   or span 2 columns on large screens for better balance */
+@media (min-width: 800px) {
+  .reservation {
+    grid-column: span 2;
+  }
+}

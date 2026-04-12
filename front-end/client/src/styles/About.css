@@ -1,0 +1,218 @@
+/* About.css - Styles adapted from Login.css for a consistent look. */
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  /* Style from Login.css */
+  background: #c6def1;
+  background-size: cover;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  overflow: hidden;
+  scrollbar-width: none;
+}
+
+.about-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- The Glass Card (Adapted from Login.css) --- */
+.about-card {
+  /* from glass-card */
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  color: var(--text-main);
+
+  /* from original about-card */
+  padding: 3rem;
+  width: 100%;
+  max-width: 700px; /* Keep this for the larger content */
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+
+.about-card::-webkit-scrollbar {
+  display: none;
+}
+
+/* --- Back Button (Adapted from Login.css) --- */
+.back-btn {
+  position: absolute; 
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; 
+  
+  /* Rule: Yellow Bg, Black Text, NO border default */
+  background: var(--primary-color);
+  border: 1px solid transparent;
+  color: #000000;
+  
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none; /* For the Link component */
+  transition: all 0.3s ease;
+  z-index: 10; 
+}
+
+.back-btn:hover {
+  /* Rule: Hover -> White Bg, Black Text, Black Border */
+  background: #FFFFFF;
+  color: #000000;
+  border-color: #000000;
+  transform: translateX(-3px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+/* --- Content Styling (Preserved from original About.css) --- */
+.about-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+}
+
+.about-intro {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.about-content-section {
+  text-align: left;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 242, 0, 0.05);
+  border-radius: 12px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.about-content-section h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 0.8rem;
+  margin-top: 0;
+}
+
+.about-content-section p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.tech-three-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.tech-three-column div h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 0.8rem;
+}
+
+.tech-three-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.tech-three-column li {
+  padding: 0.4rem 0;
+}
+
+.tech-three-column li::before {
+  content: '✓ ';
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.95rem;
+  color: #666;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+}
+
+.features-list li {
+  padding: 0.5rem 0;
+}
+
+.features-list li::before {
+  content: '→ ';
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+
+/* --- Responsive Adjustments (Preserved and adapted) --- */
+@media (max-width: 768px) {
+  .about-card {
+    padding: 2rem;
+    max-width: 90%;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .tech-three-column {
+    grid-template-columns: 1fr;
+  }
+
+  .features-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-card {
+    padding: 1.5rem;
+    max-width: 95%;
+  }
+
+  .about-title {
+    font-size: 1.7rem;
+  }
+
+  .about-intro {
+    font-size: 1rem;
+  }
+
+  .about-content-section {
+    padding: 1rem;
+  }
+}
+
+

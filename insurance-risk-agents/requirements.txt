@@ -1,0 +1,7 @@
+ibm-watsonx-orchestrate
+requests
+numpy
+pandas
+scikit-learn
+pyarrow
+pymysql

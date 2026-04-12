@@ -1,0 +1,310 @@
+.insurance-climate-timeline-container {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.insurance-climate-timeline-container h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #8884d8;
+  padding-bottom: 10px;
+}
+
+.timeline-subtitle {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0 0 24px 0;
+}
+
+.chart-wrapper {
+  background: #f9f9f9;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  border: 1px solid #eee;
+}
+
+.chart-wrapper h4 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.chart-description {
+  margin: 0 0 16px 0;
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+}
+
+.year-selector {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  padding: 12px;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.year-selector label {
+  font-weight: 600;
+  color: #555;
+}
+
+.year-selector select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  background: white;
+  min-width: 150px;
+}
+
+.year-selector select:hover {
+  border-color: #8884d8;
+}
+
+.year-details {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  border-left: 4px solid #8884d8;
+}
+
+.year-details h4 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.detail-card {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid;
+}
+
+.detail-card.insurance-card {
+  border-left-color: #2196f3;
+}
+
+.detail-card.climate-card {
+  border-left-color: #4caf50;
+}
+
+.detail-card h5 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #333;
+  font-size: 1rem;
+}
+
+.detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-weight: 500;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.detail-value {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.detail-value.alert {
+  color: #f44336;
+  background: #ffebee;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.sub-detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 8px;
+  background: #f9f9f9;
+  border-radius: 4px;
+  margin-top: 4px;
+  font-size: 0.85rem;
+}
+
+.sub-label {
+  color: #666;
+}
+
+.sub-value {
+  font-weight: 600;
+  color: #2196f3;
+}
+
+.correlation-insight {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 4px solid #ffc107;
+  margin-top: 16px;
+}
+
+.correlation-insight h5 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #f57f17;
+}
+
+.correlation-insight p {
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.summary-stats {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  border-top: 2px solid #8884d8;
+}
+
+.summary-stats h4 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.stat-card {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stat-title {
+  display: block;
+  font-size: 0.85rem;
+  color: #888;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2196f3;
+}
+
+.insights-section {
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  padding: 16px;
+  border-radius: 8px;
+  border-left: 4px solid #4caf50;
+}
+
+.insights-section h4 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #2e7d32;
+}
+
+.insights-section ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.insights-section li {
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 0.95rem;
+  padding-left: 24px;
+  position: relative;
+}
+
+.insights-section li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.timeline-loading,
+.timeline-error,
+.timeline-empty {
+  padding: 24px;
+  text-align: center;
+  background: #f5f5f5;
+  border-radius: 8px;
+  color: #666;
+}
+
+.timeline-error {
+  color: #d32f2f;
+  background: #ffebee;
+}
+
+@media (max-width: 768px) {
+  .insurance-climate-timeline-container {
+    padding: 16px;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .year-selector {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .year-selector select {
+    width: 100%;
+  }
+}

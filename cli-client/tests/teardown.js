@@ -1,0 +1,13 @@
+// tests/teardown.js
+import db from '../../back-end/server/config/db.js';
+
+export default async () => {
+  // The console logs are for debugging the teardown process itself.
+  console.log('\n[Teardown] Closing database connection...');
+  try {
+    await db.close();
+    console.log('[Teardown] Database connection closed successfully.');
+  } catch (error) {
+    console.error('[Teardown] Error closing database connection:', error);
+  }
+};

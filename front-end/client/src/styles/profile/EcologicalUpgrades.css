@@ -1,0 +1,284 @@
+.ecological-upgrades-container {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ecological-upgrades-container h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #4caf50;
+  padding-bottom: 10px;
+}
+
+.upgrades-intro {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0 0 24px 0;
+  line-height: 1.6;
+}
+
+.upgrades-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.upgrade-card {
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.upgrade-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-color: #8884d8;
+}
+
+.upgrade-card.expanded {
+  grid-column: 1 / -1;
+}
+
+.upgrade-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border-bottom: 1px solid #e0e0e0;
+  background: white;
+}
+
+.upgrade-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.upgrade-title-section {
+  flex-grow: 1;
+}
+
+.upgrade-title-section h4 {
+  margin: 0 0 4px 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.upgrade-category {
+  display: block;
+  font-size: 0.8rem;
+  color: #888;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.expand-indicator {
+  font-size: 1.5rem;
+  color: #999;
+  flex-shrink: 0;
+  font-weight: bold;
+}
+
+.upgrade-quick-info {
+  display: flex;
+  gap: 8px;
+  padding: 12px 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.difficulty-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.cost,
+.savings {
+  font-size: 0.85rem;
+  color: #666;
+  padding: 2px 6px;
+  background: white;
+  border-radius: 4px;
+}
+
+.cost::before {
+  content: '💰 ';
+}
+
+.savings::before {
+  content: '💵 ';
+}
+
+.upgrade-details {
+  display: none;
+}
+
+.upgrade-card.expanded .upgrade-details {
+  display: block;
+  padding: 16px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.upgrade-description {
+  margin: 0 0 16px 0;
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.upgrade-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+  padding: 12px;
+  background: #f5f5f5;
+  border-radius: 6px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-label {
+  font-size: 0.8rem;
+  color: #888;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.info-value {
+  font-size: 0.95rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.upgrade-benefits {
+  margin-bottom: 16px;
+}
+
+.upgrade-benefits h5 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.upgrade-benefits ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.upgrade-benefits li {
+  color: #666;
+  font-size: 0.9rem;
+  padding: 4px 8px;
+  background: white;
+  border-radius: 4px;
+  border-left: 2px solid #4caf50;
+  padding-left: 10px;
+}
+
+.upgrade-cta {
+  width: 100%;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.upgrade-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.upgrades-advice {
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #4caf50;
+}
+
+.upgrades-advice h4 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #2e7d32;
+  font-size: 1.1rem;
+}
+
+.upgrades-advice ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.upgrades-advice li {
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 0.95rem;
+  padding-left: 24px;
+  position: relative;
+}
+
+.upgrades-advice li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #4caf50;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 1024px) {
+  .upgrades-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .ecological-upgrades-container {
+    padding: 16px;
+  }
+
+  .upgrades-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .upgrade-card.expanded {
+    grid-column: 1;
+  }
+
+  .upgrade-header {
+    flex-wrap: wrap;
+  }
+
+  .upgrade-quick-info {
+    justify-content: space-between;
+  }
+
+  .upgrade-benefits ul {
+    grid-template-columns: 1fr;
+  }
+}

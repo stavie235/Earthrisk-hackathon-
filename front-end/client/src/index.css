@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* EarthRisk Dark Fintech Theme */
+  --primary-color:    #00c2ff;
+  --primary-hover:    #00a8e0;
+  --primary-dim:      rgba(0, 194, 255, 0.15);
+  --accent-glow:      rgba(0, 194, 255, 0.25);
+
+  --bg-deep:          #080c14;
+  --bg-surface:       #0d1321;
+  --bg-card:          rgba(13, 20, 38, 0.97);
+  --bg-elevated:      #111827;
+
+  --border-subtle:    rgba(255,255,255,0.06);
+  --border-muted:     rgba(255,255,255,0.1);
+  --border-accent:    rgba(0, 194, 255, 0.3);
+
+  --text-primary:     #e2e8f0;
+  --text-secondary:   #94a3b8;
+  --text-muted:       #475569;
+  --text-on-accent:   #000000;
+
+  /* Risk palette */
+  --risk-very-low:    #22c55e;
+  --risk-low:         #84cc16;
+  --risk-medium:      #eab308;
+  --risk-high:        #f97316;
+  --risk-very-high:   #ef4444;
+
+  color-scheme: dark;
+  color: var(--text-primary);
+  background-color: var(--bg-deep);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg-deep);
+}
+
+h1, h2, h3, h4 { color: var(--text-primary); }
+
+a {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: inherit;
+  transition: color 0.2s;
+}
+a:hover { color: var(--primary-hover); }
+
+button {
+  border-radius: 8px;
+  border: 1px solid var(--border-muted);
+  padding: 0.55em 1.2em;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: inherit;
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: var(--primary-dim);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}

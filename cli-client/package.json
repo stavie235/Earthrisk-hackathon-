@@ -1,0 +1,27 @@
+{
+  "name": "se2519",
+  "version": "1.0.0",
+  "description": "Ενδεικτικά περιεχόμενα:",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "se2519": "./index.js"
+  },
+  "scripts": {
+    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.13.2",
+    "commander": "^14.0.2",
+    "csv-stringify": "^6.6.0",
+    "link": "^2.1.2",
+    "npm": "^11.9.0"
+  },
+  "devDependencies": {
+    "dotenv": "^17.2.3",
+    "jest": "^29.7.0"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls c:/Users/stavie/Dualboots-1/front-end/client/node_modules/@xyflow/react/dist/*.css)",
+      "Bash(python -c \"import pptx; print\\(pptx.__version__\\)\")",
+      "Bash(pip install:*)",
+      "Bash(python -c \"import pptx; print\\(''ok''\\)\")",
+      "Bash(python generate_pitch.py)",
+      "Bash(cat /c/Users/stavie/Dualboots-1/insurance-risk-agents/*.yaml)",
+      "Bash(python -c \"import joblib; print\\(''ok''\\)\")",
+      "Bash(where python:*)",
+      "Bash(\"C:\\\\Users\\\\stavie\\\\AppData\\\\Local\\\\Programs\\\\Python\\\\Python312\\\\python.exe\" -c \"import joblib; print\\(''ok''\\)\")",
+      "Bash(\"C:\\\\Users\\\\stavie\\\\AppData\\\\Local\\\\Python\\\\bin\\\\python.exe\" -c \"import joblib; print\\(''ok''\\)\")",
+      "Bash(\"C:\\\\Users\\\\stavie\\\\Dualboots-1\\\\insurance-risk-agents\\\\.venv\\\\Scripts\\\\python.exe\" -c \"import joblib, sklearn, pandas, shap; print\\(''all ok''\\)\")",
+      "Bash(grep -r \"latitude\\\\|longitude\\\\|lngLat\\\\|setLng\" c:UsersstavieDualboots-1front-endclientsrc --include=*.jsx --include=*.js)",
+      "Bash(\"c:/Users/stavie/Dualboots-1/insurance-risk-agents/.venv/Scripts/python.exe\" -c \":*)"
+    ]
+  }
+}
