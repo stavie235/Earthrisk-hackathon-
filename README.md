@@ -50,6 +50,19 @@ Stavrvoula Tsoutsoura
 Anna Eirini Anagnostopoulou 
 Thodoris Tsoutsouras
 
+---
+
+## Demo video
+
+
+
+https://github.com/user-attachments/assets/65db1848-c157-43ac-a494-561730d462b5
+
+
+
+
+---
+
 ## Running with Docker
 
 This is the recommended way to run EarthRisk locally. Docker Compose starts all services — MySQL, the Express backend, the React frontend, the ML inference API, and a one-off database seeder — with a single command.
