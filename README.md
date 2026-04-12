@@ -56,9 +56,14 @@ Thodoris Tsoutsouras
 
 
 
-https://github.com/user-attachments/assets/65db1848-c157-43ac-a494-561730d462b5
+https://github.com/user-attachments/assets/3e6dd31e-295a-46c3-98cf-b82fa6218c85
 
 
+
+![image](https://github.com/user-attachments/assets/81ebbfed-4c87-40f3-ac11-49098a95fdcd)
+![image](https://github.com/user-attachments/assets/256eef10-15a7-4d39-8f1a-9799ff0a2805)
+
+https://prezi.com/view/uXLQ9FWz0H1dhooSLXAr/?referral_token=_rbKrnlnB3FN 
 
 
 ---
@@ -70,6 +75,8 @@ This is the recommended way to run EarthRisk locally. Docker Compose starts all 
 ### Prerequisites
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/) (includes Docker Compose)
+- <img width="1024" height="572" alt="image" src="https://github.com/user-attachments/assets/aaa0e48e-5019-4781-bb91-5ccd5c8f34bd" />
+
 
 ### 1. Clone the repo
 
