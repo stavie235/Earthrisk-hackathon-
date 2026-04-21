@@ -183,4 +183,4 @@ earthrisk/
 
 ## License
 
-This project was developed as part of a  hackathon  .Won first place in IBM category and second place overall. All rights reserved by the team.
+This project was developed as part of a  hackathon. Won first place in IBM category and second place overall. All rights reserved by the team.
